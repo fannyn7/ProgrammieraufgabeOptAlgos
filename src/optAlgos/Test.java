@@ -15,8 +15,8 @@ public class Test extends JPanel {
 			list.add(new Rechteck(300, 300, 100, 100));
 			RechteckenProblem problem = new RechteckenProblem(list);
 			for (Rechteck r: problem.getRechteckenMenge()){
-				int lange = r.getLange();
-				int breite = r.getBreite();
+				int lange = r.getLange_x();
+				int breite = r.getLange_y();
 				int x = r.getPosX();
 				int y = r.getPosY();
 				g.fillRect(x, y, lange, breite);
