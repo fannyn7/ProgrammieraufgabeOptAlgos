@@ -4,8 +4,14 @@ import java.util.ArrayList;
 
 public class RechteckenSolution implements Solution {
 	
-	public RechteckenSolution() {
+	private int cost;
+	private ArrayList<Rechteck> solutionMenge;
 	
+	public RechteckenSolution(ArrayList<Rechteck> mengeRechtecken) {
+		
+		this.solutionMenge = mengeRechtecken;
+		this.cost = Integer.MAX_VALUE;
+
 	}
 	
 	@Override

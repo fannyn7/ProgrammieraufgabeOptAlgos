@@ -12,11 +12,12 @@ public class Test extends JPanel {
 			ArrayList<Rechteck> list = new ArrayList<Rechteck>();
 			list.add(new Rechteck(5, 5, 10, 10));
 			list.add(new Rechteck(15, 15, 20, 20));
-			list.add(new Rechteck(300, 300, 100, 100));
+			list.add(new Rechteck(100, 300, 100, 100));
+		
 			RechteckenProblem problem = new RechteckenProblem(list);
 			for (Rechteck r: problem.getRechteckenMenge()){
-				int lange = r.getLange_x();
-				int breite = r.getLange_y();
+				int lange = r.getLange();
+				int breite = r.getBreite();
 				int x = r.getPosX();
 				int y = r.getPosY();
 				g.fillRect(x, y, lange, breite);
@@ -30,5 +31,8 @@ public class Test extends JPanel {
 			frame.getContentPane().add(test);
 			frame.setSize(500,500);
 			frame.setVisible(true);
+			
+			
+		
 		}
 }

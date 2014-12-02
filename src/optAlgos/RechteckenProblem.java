@@ -9,8 +9,8 @@ public class RechteckenProblem implements Problem {
 	private double temperature;
 	
 	public RechteckenProblem(ArrayList<Rechteck> list){
-		rechteckenMenge = list;
-		temperature = TEMPERATURE;
+		this.rechteckenMenge = list;
+		this.temperature = TEMPERATURE;
 	}
 	
 	@Override
@@ -20,7 +20,6 @@ public class RechteckenProblem implements Problem {
 
 	@Override
 	public Solution getRandomSolution() {
-		// TODO
 		return null;
 	}
 
