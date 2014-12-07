@@ -7,25 +7,34 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Test extends JPanel {
+	
+		private ArrayList<Rechteck> rechteckeMenge;
+		
+		public Test(){
+			rechteckeMenge = new ArrayList<Rechteck>();
+		}
+		
+		public Test(ArrayList<Rechteck> list){
+			rechteckeMenge = list;
+		}
+		
 		public void	paintComponent(Graphics	g){
 			super.paintComponent(g);
-			ArrayList<Rechteck> list = new ArrayList<Rechteck>();
-			list.add(new Rechteck(5, 5, 10, 10));
-			list.add(new Rechteck(15, 15, 20, 20));
-			list.add(new Rechteck(100, 300, 100, 100));
-		
-			RechteckenProblem problem = new RechteckenProblem(list);
-			for (Rechteck r: problem.getRechteckenMenge()){
-				int lange = r.getLange();
-				int breite = r.getBreite();
+
+			for (Rechteck r: rechteckeMenge){
+				int lange = r.getWSeite();
+				int breite = r.getSSeite();
 				int x = r.getPosX();
 				int y = r.getPosY();
-				g.fillRect(x, y, lange, breite);
+				g.drawRect(x, y, lange, breite);
 			}
 	}
 
 		public static void main(String[] args){
-			Test test = new	Test();
+			RechteckenProblem p = new RechteckenProblem();
+			RechteckenSolution s = p.getRandomSolution();
+			
+			Test test = new	Test(s.getSolutionMenge());
 			JFrame frame = new JFrame("RechteckenProblem Visualiesierung");
 			frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			frame.getContentPane().add(test);

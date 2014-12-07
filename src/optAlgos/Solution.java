@@ -12,4 +12,6 @@ public interface Solution {
 
 	public boolean makeProbabilisticDecision(Solution randomNeighbour);
 
+	public int getCost();
+
 }

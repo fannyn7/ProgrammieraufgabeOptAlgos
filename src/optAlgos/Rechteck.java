@@ -46,12 +46,12 @@ public class Rechteck {
 		this.waagerechteSeite = wSeite;
 	}
 	
-	public int getASeite(){
+	public int getSSeite(){
 		return senkrechteSeite;
 	}
 	
-	public void setASeite(int wSeite) {
-		this.waagerechteSeite = wSeite;
+	public void setSSeite(int sSeite) {
+		this.senkrechteSeite = sSeite;
 	}
 
 	public int getLange() {

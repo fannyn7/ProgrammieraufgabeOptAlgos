@@ -1,6 +1,7 @@
 package optAlgos;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class RechteckenSolution implements Solution {
 	
@@ -14,22 +15,48 @@ public class RechteckenSolution implements Solution {
 
 	}
 	
+	public int getCost() {
+		return cost;
+	}
+
+	public void setCost(int cost) {
+		this.cost = cost;
+	}
+
+	public ArrayList<Rechteck> getSolutionMenge() {
+		return solutionMenge;
+	}
+
+	public void setSolutionMenge(ArrayList<Rechteck> solutionMenge) {
+		this.solutionMenge = solutionMenge;
+	}
+
 	@Override
 	public ArrayList<Solution> getNeighbours() {
-		// TODO Auto-generated method stub
-		return null;
+		ArrayList<Solution> solutions = new ArrayList<Solution>();
+		
+		//  gedreht
+		
+		
+		// verschoben
+		
+		
+		// vertauscht
+		
+		
+		return solutions;
 	}
 
 	@Override
 	public boolean testBestSolution(Solution s) {
-		// TODO Auto-generated method stub
-		return false;
+		return (this.getCost() < s.getCost());
 	}
 
 	@Override
 	public Solution getRandomNeighbour() {
-		// TODO Auto-generated method stub
-		return null;
+		Random r = new Random();
+		ArrayList<Solution> solutions = this.getNeighbours();
+		return solutions.get(r.nextInt(solutions.size()));
 	}
 
 	@Override
