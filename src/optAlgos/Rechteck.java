@@ -5,8 +5,7 @@ public class Rechteck {
 	int waagerechteSeite;
 	int senkrechteSeite;
 	
-	// Position of the right-down corner
-	// ???? c'est left-top non ?
+	// Position of the left-top corner
 	int posX;
 	int posY;
 	
